@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p v-if="seen">可以看到见</p>
+        <ol>
+            <li v-for="todo in todos">{{todo}}</li>
+        </ol>
+    </div> 
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            seen: true,
+            todos: ['学习vue','学习javascript','整个牛项目']
+        }
+    })
+</script>
+</html>
